@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <%- include("head/meta.ejs") -%>
+    
+<title><%= locals.title ? title : "default" %></title>
+    <%- include("head/link.ejs") -%>
+    <%- include("head/script.ejs") -%>
+    <%- include("body/header/navbar/style.ejs") -%>
+      
+    <%- include("body/main/aboutpage/style.ejs") -%>
+
+      
+    <%- include("footer/style.ejs") -%>
+<style type='text/css' rel='stylesheet'>
+#preload{background:#676e81;position:fixed;top:0;width:100%;height:100vh;align-items:center;display:flex;justify-content:center;z-index: 1100}
+#preload img{display:inline-flex;justify-content:center;max-width:20rem}
+</style>   
+    
+</head>
+<body>
+
+<div id="preload" class="text-center"><img class="img-fluid" alt="preload" src="https://i.pinimg.com/originals/6b/fb/5b/6bfb5bb1885f3174dd650f07233befde.gif"/></div>
+    <%- include("body/header/navbar/html.ejs") -%>
+    <div class="main-box w-100">
+      
+      <%- include("body/main/aboutpage/html.ejs") -%>
+      
+      <%- include("footer/html.ejs") -%>
+    </div>
+    <%- include("footer/script.ejs") -%>
+      
+    <%- include("body/header/navbar/script.ejs") -%>
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded',(event)=>{setTimeout(()=>{document.getElementById("preload").style.display="none"},1_000)})
+</script>
+  
+</body>
+</html>

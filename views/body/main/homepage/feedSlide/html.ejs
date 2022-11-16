@@ -1,0 +1,66 @@
+<%
+const slide_img_src = [
+  {
+    src:
+    'https://imgs.search.brave.com/s-uN8yROppF55D6C7dzwyCFPNAoSLJAeZ-LF33pKFE8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bWFjaGVhdC5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDQvaXBob25lLTE0/LXByby10by1jb21l/LXdpdGgtNDgtbWVn/YXBpeGVsLWNhbWVy/YS01MzI2NjEtMi5q/cGc',
+      
+    text: {
+      mobile: 'We deal with !',
+      desktop: 'Avalable Brands In Our Shop !  with varity of accesseries... '
+    }
+   }
+  ,
+  {
+    src:
+    'https://imgs.search.brave.com/xUkRsUH7defrK1Cw4dzzwj8iwbBF9Hs1Q_uIRsGmrwE/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC40/bXN5a1pnazlhcm16/MXRSdWt6NExBSGFI/YSZwaWQ9QXBp',
+      
+    text:{
+      mobile: 'Vivo',
+      desktop: 'Vivo, Apple, Samgsung , Oppo, Mi, Micromax '
+    }
+  }, 
+  {
+    src:
+    'https://imgs.search.brave.com/xLvgAO0Fms-0SniTKuhl3K8E38uvN6XIwI6Tiyt1T54/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bGlmZXdpcmUuY29t/L3RobWIvVzZOY3Z0/MTVqNDQ5R2J1NHJ4/cEpkQndqYzFrPS8x/NTAweDE0MTUvZmls/dGVyczpmaWxsKGF1/dG8sMSkvTUFJTi0y/MTE4MEpCTEU1NUJU/UXVpbmN5RWRpdGlv/bi01YTgyZjhhMGEx/OGQ5ZTAwMzZmNTc0/ZmIuanBn',
+      
+    text:{
+      mobile: 'I Phone',
+      desktop: 'Phone, Headset, Wireless Ear-buds, Earphones'
+  
+    }
+  }
+],
+
+l = slide_img_src.length;
+%>
+<div class="container-md my-3">
+    <div id="myCarouselFeed" class="carousel slide img-fluid" data-bs-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <% for(let i=0; i < l;i++) { %>
+            <li data-bs-target="#myCarouselFeed" data-bs-slide-to="<%= i %>" class="<%= i === 0 ? 'active' : '' %>"></li>
+          <% } %>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <% slide_img_src.forEach((item, i) => { i++; %>
+            <div class="carousel-item  <%= i === 1 ? 'active' : '' %>">
+                <img src="<%= item.src %>" class="d-block w-100" alt="Slide <%= i %>">
+                <div class="carousel-content">
+                  <p class='mobile-text'><%= item.text.mobile %></p>
+                  <p class='desktop-text'><%= item.text.desktop %></p>
+                </div>
+            </div>
+          <% }) %>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarouselFeed" data-bs-slide="prev">
+            <span><i class="fa fa-angle-double-left"></i></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarouselFeed" data-bs-slide="next">
+            <span><i class="fa fa-angle-double-right"></i></span>
+        </a>
+    </div>
+</div>
+
+

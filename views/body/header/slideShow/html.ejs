@@ -1,0 +1,73 @@
+<%
+const slide_img_src = [
+   {
+    src:
+    '/img/shopmain.png',
+      
+    text:{
+      mobile: '',
+      desktop: ''
+    }
+  },
+  {
+    src:
+    '/img/shop.png',
+      
+    text:{
+      mobile: '',
+      desktop: ''
+    }
+  },
+    {
+    src:
+    '/img/shop2.png',
+      
+    text:{
+      mobile: '',
+      desktop: ''
+    }
+  },
+    {
+    src:
+    '/img/shop3.png',
+      
+    text:{
+      mobile: '',
+      desktop: ''
+    }
+  }
+],
+
+l = slide_img_src.length;
+%>
+<div class="container-md my-3">
+    <div id="myCarousel" class="carousel slide img-fluid" data-bs-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <% for(let i=0; i < l;i++) { %>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="<%= i %>" class="<%= i === 0 ? 'active' : '' %>"></li>
+          <% } %>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <% slide_img_src.forEach((item, i) => { i++; %>
+            <div class="carousel-item  <%= i === 1 ? 'active' : '' %>">
+                <img src="<%= item.src %>" class="d-block w-100" alt="Slide <%= i %>">
+                <div class="carousel-content">
+                  <p class='mobile-text'><%= item.text.mobile ? item.text.mobile : '' %></p>
+                  <p class='desktop-text'><%= item.text.desktop ? item.text.desktop : '' %></p>
+                </div>
+            </div>
+          <% }) %>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+            <span><i class="fa fa-angle-double-left"></i></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+            <span><i class="fa fa-angle-double-right"></i></span>
+        </a>
+    </div>
+</div>
+
+
