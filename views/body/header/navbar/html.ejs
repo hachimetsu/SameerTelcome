@@ -27,9 +27,7 @@ const login = "";
               <% nav.forEach((item) => { %>
            <a class="nav-item nav-link" href="<%= item.href %>" <%= item.name === 'Map' ? 'role=button  data-bs-toggle=modal' : '' %> ><%= item.name %></a>
               <% }) %>
-                
             </div>
-                
             <% if(login != "") { %>
               <div class="navbar-nav ms-auto">
                   <a href="#" class="nav-item nav-link">Login</a>

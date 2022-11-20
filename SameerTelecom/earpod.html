@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Telecom</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style type="text/css">
+  /* navbar */
+.navbar-toggler:focus {
+  box-shadow:0 0 0 0.1rem;
+}
+iframe#map {
+  width: 100%;
+    min-height: 25rem;
+}
+</style>      
+
+      
+    <style type="text/css">
+  /* .footer {
+    padding: 2rem 0.5rem;
+    width: 100%;
+  } */
+
+  footer .main-footer{  padding: 20px 0;  background: #252525;}
+footer ul{  padding-left: 0;  list-style: none;}
+
+/* Copy Right Footer */
+.footer-copyright { background: #222; padding: 5px 0;}
+.footer-copyright .logo {    display: inherit;}
+.footer-copyright nav {    float: right;    margin-top: 5px;}
+.footer-copyright nav ul {  list-style: none; margin: 0;  padding: 0;}
+.footer-copyright nav ul li { border-left: 1px solid #505050; display: inline-block;  line-height: 12px;  margin: 0;  padding: 0 8px;}
+.footer-copyright nav ul li a{  color: #969696;}
+.footer-copyright nav ul li:first-child { border: medium none;  padding-left: 0;}
+.footer-copyright p { color: #969696; margin: 2px 0 0;}
+
+/* Footer Top */
+.footer-top{  background: #252525;  padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;}
+
+/* Footer transparent */
+footer.transparent .footer-top, footer.transparent .main-footer{  background: transparent;}
+footer.transparent .footer-copyright{ background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3) ;}
+
+/* Footer light */
+footer.light .footer-top{ background: #f9f9f9;}
+footer.light .main-footer{  background: #f9f9f9;}
+footer.light .footer-copyright{ background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3) ;}
+
+/* Footer 4 */
+.footer- .logo {    display: inline-block;}
+
+/*==================== 
+  Widgets 
+====================== */
+.widget{  padding: 20px;  margin-bottom: 40px;}
+.widget.widget-last{  margin-bottom: 0px;}
+.widget.no-box{ padding: 0; background-color: transparent;  margin-bottom: 40px;
+  box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;}
+.widget.subscribe p{  margin-bottom: 18px;}
+.widget li a{ color: #ff8d1e;}
+.widget li a:hover{ color: #4b92dc;}
+.widget-title {margin-bottom: 20px;}
+.widget-title span {background: #839FAD none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
+.widget-title span::after {background: inherit;content: "";height: inherit;    position: absolute;top: -4px;width: 50%;}
+.widget-title.text-center span,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;}
+.widget .badge{ float: right; background: #7f7f7f;}
+
+.typo-light h1, 
+.typo-light h2, 
+.typo-light h3, 
+.typo-light h4, 
+.typo-light h5, 
+.typo-light h6,
+.typo-light p,
+.typo-light div,
+.typo-light span,
+.typo-light small{  color: #fff;}
+
+ul.social-footer2 { margin: 0;padding: 0; width: auto;}
+ul.social-footer2 li {display: inline-block;padding: 0;}
+ul.social-footer2 li a:hover {background-color:#ff8d1e;}
+ul.social-footer2 li a {display: block; height:30px;width: 30px;text-align: center;}
+.btn{background-color: #ff8d1e; color:#fff;}
+.btn:hover, .btn:focus, .btn.active {background: #4b92dc;color: #fff;
+-webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-ms-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-o-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-webkit-transition: all 250ms ease-in-out 0s;
+-moz-transition: all 250ms ease-in-out 0s;
+-ms-transition: all 250ms ease-in-out 0s;
+-o-transition: all 250ms ease-in-out 0s;
+transition: all 250ms ease-in-out 0s;
+
+}
+</style>
+<style type="text/css" rel="stylesheet">
+#preload{background:#676e81;position:fixed;top:0;width:100%;height:100vh;align-items:center;display:flex;justify-content:center;z-index: 1100}
+#preload img{display:inline-flex;justify-content:center;max-width:20rem}
+</style>   
+    
+</head>
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+
+<div id="preload" class="text-center" style="display: none;">
+  <img class="img-fluid" alt="preload" src="./earpod_files/6bfb5bb1885f3174dd650f07233befde.gif">
+</div>
+    
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">SAMEER TELECOM</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              
+           <a class="nav-item nav-link" href="/">Home</a>
+              
+           <a class="nav-item nav-link" href="about.html">About</a>
+              
+           <a class="nav-item nav-link" href="#myModal" role="button" data-bs-toggle="modal">Map</a>
+              
+            </div>
+            
+              
+        </div>
+    </div>
+</nav>
+
+<div class="m-4">
+  <!-- Button HTML (to Trigger Modal) -->
+  <!-- Modal HTML -->
+  <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog  modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>you can open map in new page and get a directin !</p>
+          <p class="text-secondary"><small>any Query contect Us <a herf="#" alt="">+91 1234 567 890</a></small></p>
+          <iframe id='map'
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6882.901907870698!2d77.93997757503723!3d30.39494497702457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d4c48eeebfed%3A0x2c7b7c0bd55ef388!2sChaknugaon%2C%20Uttarakhand%20248007!5e0!3m2!1sen!2sin!4v1668398663962!5m2!1sen!2sin"
+            style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>                  <div class="main-box w-100">
+      
+      
+<style type="text/css">
+</style>
+<div class="container-fluid">
+  
+    <section class="mx-auto border my-3" style="max-width: 750px;">
+      <div class="d-sm-flex p-1">
+        <div class="m-1 text-center w-100" style="max-width: 400px;">
+          <img class="img-fluid text-center" src="./earpod_files/apple.jpg" alt="apple">
+        </div>
+        <div class=" p-3 alert-info w-100">
+          <p>
+             
+              </p><p><span class="text-info fs-5">Brand </span>  :  Samsung</p>  
+             
+              <p><span class="text-info fs-5">Connectivity</span>  :  Technology Wireless</p>  
+             
+              <p><span class="text-info fs-5">Noise Control </span>  : 	Active Noise Cancellation</p>  
+             
+              <p><span class="text-info fs-5">Water Resistance Level</span>  : 	Water Resistant</p>  
+             
+              <p><span class="text-info fs-5">Power Source </span>  :  Battery-Powered</p>  
+             
+              <p><span class="text-info fs-5">Special Feature </span>  :  IPX7 water resistant, Long-lasting battery with quick </p>  
+             
+              <p><span class="text-info fs-5">Price </span>  :  6,000 </p>  
+            
+          <p></p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="mx-auto border my-3" style="max-width: 750px;">
+      <div class="d-sm-flex p-1">
+        <div class="m-1 text-center w-100" style="max-width: 400px;">
+          <img class="img-fluid text-center" src="./earpod_files/mi.jpg" alt="mi">
+        </div>
+        <div class=" p-3 alert-info w-100">
+          <p>
+             
+              </p><p><span class="text-info fs-5"> Brand </span>  :  Apple </p>  
+             
+              <p><span class="text-info fs-5">Connectivity Technology	Bluetooth 5.0</span>  : </p>  
+             
+              <p><span class="text-info fs-5">Noise Control	Sound Isolation</span>  : </p>  
+             
+              <p><span class="text-info fs-5">Water Resistance Level	Water Resistant</span>  : </p>  
+             
+              <p><span class="text-info fs-5">Power Source	Battery-Powered</span>  : </p>  
+             
+              <p><span class="text-info fs-5">Special Feature	IOS Phone Control, Lightweight, Microphone Feature, Sports &amp; Exercise</span>  : </p>  
+             
+              <p><span class="text-info fs-5">Price </span>  :  20,000 </p>  
+            
+          <p></p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="mx-auto border my-3" style="max-width: 750px;">
+      <div class="d-sm-flex p-1">
+        <div class="m-1 text-center w-100" style="max-width: 400px;">
+          <img class="img-fluid text-center" src="./earpod_files/oneplus.jpg" alt="oneplus">
+        </div>
+        <div class=" p-3 alert-info w-100">
+          <p>
+             
+              </p><p><span class="text-info fs-5"> Brand </span>  :  MI</p>  
+             
+              <p><span class="text-info fs-5">Connectivity </span>  :  Technology Wireless</p>  
+             
+              <p><span class="text-info fs-5">Noise Control </span>  : 	Active Noise Cancellation</p>  
+             
+              <p><span class="text-info fs-5">Water Resistance Level </span>  :  Water Resistant</p>  
+             
+              <p><span class="text-info fs-5">Frequency Range </span>  :  20Hz - 20kHz</p>  
+             
+              <p><span class="text-info fs-5">Special Feature </span>  :  Wireless, Microphone, Noise-Canceling, Noise-Isolating</p>  
+             
+              <p><span class="text-info fs-5">Price </span>  :  5,000 </p>  
+            
+          <p></p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="mx-auto border my-3" style="max-width: 750px;">
+      <div class="d-sm-flex p-1">
+        <div class="m-1 text-center w-100" style="max-width: 400px;">
+          <img class="img-fluid text-center" src="./earpod_files/oppo.jpg" alt="oppo">
+        </div>
+        <div class=" p-3 alert-info w-100">
+          <p>
+             
+              </p><p><span class="text-info fs-5"> Brand </span>  :  Oppo</p>  
+             
+              <p><span class="text-info fs-5">Connectivity </span>  :  Technology Wireless</p>  
+             
+              <p><span class="text-info fs-5">Noise Control </span>  : 	Active Noise Cancellation</p>  
+             
+              <p><span class="text-info fs-5">Water Resistance Level </span>  :  Water Resistant</p>  
+             
+              <p><span class="text-info fs-5">Special Feature </span>  :  Lightweight, Microphone Feature, Sports &amp; Exercise</p>  
+             
+              <p><span class="text-info fs-5">Price </span>  :  2,000 </p>  
+            
+          <p></p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="mx-auto border my-3" style="max-width: 750px;">
+      <div class="d-sm-flex p-1">
+        <div class="m-1 text-center w-100" style="max-width: 400px;">
+          <img class="img-fluid text-center" src="./earpod_files/samsung.jpg" alt="samsung">
+        </div>
+        <div class=" p-3 alert-info w-100">
+          <p>
+             
+              </p><p><span class="text-info fs-5"> Brand </span>  : 	OnePlus</p>  
+             
+              <p><span class="text-info fs-5">Model Name </span>  : 	OnePlus Nord Buds</p>  
+             
+              <p><span class="text-info fs-5">Color </span>  : 	Black Slate</p>  
+             
+              <p><span class="text-info fs-5">Form Factor  </span>  : 	In Ear</p>  
+             
+              <p><span class="text-info fs-5">Connectivity Technology </span>  : Wireless</p>  
+             
+              <p><span class="text-info fs-5">Price </span>  :  10,000</p>  
+            
+          <p></p>
+        </div>
+      </div>
+    </section>
+    
+</div>
+      
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="earpod.html" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="earpod.html" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="earpod.html" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="earpod.html" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="earpod.html" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="earpod.html" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i>Sameer Telcom</h6>
+          <p>
+            Financers available <br>
+            Samsung Finance+ <br>
+            Mahindra consumer finance<br>
+            Home credit<br>
+            IDFC First Bank<br>
+            HDB
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="phone.html" class="text-reset">Phone</a>
+          </p>
+          <p>
+            <a href="earphone.html" class="text-reset">Earphone</a>
+          </p>
+          <p>
+            <a href="tv.html" class="text-reset">TV</a>
+          </p>
+          <p>
+            <a href="earpod.html" class="text-reset">Earpods</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="home.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="about.html" class="text-reset">About</a>
+          </p>
+          <p>
+            <a href="#myModal" class="text-reset">Map</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Shubhas Nagar</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> +91 98 97 09 6668.</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:<a class="text-reset fw-bold" href="/">Sameer Telecom</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->    </div>
+    <script type="text/javascript">
+  
+</script>      
+    <script type="text/javascript">
+</script><script type="text/javascript">
+window.addEventListener('DOMContentLoaded',(event)=>{setTimeout(()=>{document.getElementById("preload").style.display="none"},1_000)})
+</script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

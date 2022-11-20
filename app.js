@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //     extended: true
 // }));
 //  Alternative for bodyparser !
+
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
@@ -38,16 +39,30 @@ app.use(express.urlencoded({
 // });
 
 app.get('/', function (req, res) {
-    res.render('homepage', { title: "Sameer Telcom" });
+    res.render('homepage', { title: "home" });
 });
 
 app.get("/about", (req, res) => {
-      res.render('aboutpage', { title: "About" });
+      res.render('aboutpage', { title: "about" });
 });
 
 app.get("/phone", (req, res) => {
       res.render('phonepage', { title: "phone" });
 });
-
+app.get("/earpod", (req, res) => {
+    res.render('earpod', { title: "earpod" });
+});
+app.get("/headset", (req, res) => {
+    res.render('headset', { title: "headset" });
+});
+app.get("/smartwatch", (req, res) => {
+    res.render('smartwatch', { title: "smartwatch" });
+});
+app.get("/earphone", (req, res) => {
+    res.render('earphone', { title: "earphone" });
+});
+app.get("/tv", (req, res) => {
+    res.render('tv', { title: "tv" });
+});
 app.listen(5000, () => { console.log("server is up !") });
 
